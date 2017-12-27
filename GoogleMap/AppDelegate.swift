@@ -2,20 +2,26 @@
 //  AppDelegate.swift
 //  GoogleMap
 //
-//  Created by Dinesh Sunder on 12/5/17.
+//  Created by Dinesh Sunder on 12/12/17.
 //  Copyright © 2017 Dinesh Sunder. All rights reserved.
 //
 
 import UIKit
+import GoogleMaps
+import GooglePlaces
+import CoreLocation
 
 @UIApplicationMain
 class AppDelegate: UIResponder, UIApplicationDelegate {
 
     var window: UIWindow?
 
-
+    
     func application(_ application: UIApplication, didFinishLaunchingWithOptions launchOptions: [UIApplicationLaunchOptionsKey: Any]?) -> Bool {
         // Override point for customization after application launch.
+        
+        GMSPlacesClient.provideAPIKey("AIzaSyCkxf7S4Ga65WaEO5o1o7XEByCikiBPGk4")
+        GMSServices.provideAPIKey("AIzaSyCkxf7S4Ga65WaEO5o1o7XEByCikiBPGk4")
         return true
     }
 
@@ -40,6 +46,7 @@ class AppDelegate: UIResponder, UIApplicationDelegate {
     func applicationWillTerminate(_ application: UIApplication) {
         // Called when the application is about to terminate. Save data if appropriate. See also applicationDidEnterBackground:.
     }
+    
 
 
 }
